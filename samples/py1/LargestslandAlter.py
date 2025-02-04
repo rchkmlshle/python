@@ -61,7 +61,7 @@ def main():
     print(sln1.AlterGridMeasure()) #3
     print(sln2.AlterGridMeasure()) #4
     print(sln3.AlterGridMeasure()) #4
-    print(sln4.AlterGridMeasure()) #11
+    print(sln4.AlterGridMeasure()) #4
 
 if __name__=='__main__':
     main()
