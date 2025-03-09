@@ -14,7 +14,7 @@ turn determines the order of which the people will board the bus, where turn=1 d
 weight is the weight of the person in kilograms.
 */
 
---Solution1
+--Solution1 - postgresql
  select person_name 
  from
  (
@@ -26,7 +26,7 @@ weight is the weight of the person in kilograms.
  order by total_weight DESC
  LIMIT 1
 
- ---Solution 2. Mars super duper Genius complex version
+ ---Solution 2. postgresql
  with cta 
 as
 (
