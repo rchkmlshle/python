@@ -9,7 +9,7 @@ class ProcessApi:
     def __init__(self, item:str, req_list:list=None):
         self.item=item
         self.req_list=req_list
-        with open('params.json', 'r') as f:
+        with open('secrets.json', 'r') as f:
             config = json.load(f)
         self.url = config[item]["base_url"]
         self.api_key=config[item]["api_key"]

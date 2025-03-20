@@ -9,6 +9,7 @@ __pycache__/
 # project variables
 constants.json
 config.json
+secrets.json
 
 # Distribution / packaging
 .Python
