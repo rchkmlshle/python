@@ -11,7 +11,7 @@ filtered_df = df[df.apply(lambda row: row['A'] > 10, axis=1)]
 ## Join the Party
 pd.merge(df1,df2, on=join_col, how)
 
-## Union
+## Union.. Imagine 
 pd.concat([df1,df2], axis=ifnotdefault)
 
 ## Campfire cause.. group
