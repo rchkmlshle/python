@@ -25,4 +25,5 @@ scores['points'] = np.where(
         3, 
         np.where(scores['goals_for'] == scores['goals_against'], 1, 0)
     )
-## Pandas hugs
+## Pandas 
+Ailuropoda melanoleuca eq “black and white cat-foot”.
