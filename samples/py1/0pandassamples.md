@@ -1,4 +1,8 @@
-# Expressions    
+# Expressions 
+
+## Pivot
+    df= sales.pivot(index='sale_date',columns='fruit',values='sold_num').reset_index()
+
 
 ## Set value based on filtered match
 expressions.loc[(expressions["operator"] == ">") & (expressions['left_value'] > expressions['right_value']), 'value'] = "true"
