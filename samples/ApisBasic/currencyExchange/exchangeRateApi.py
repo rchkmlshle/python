@@ -3,6 +3,7 @@ import json
 import pandas 
 import logging
 import boto3
+from io import StringIO
 
 class ProcessApi:
     def __init__(self, item:str, req_list:list=None):
@@ -21,8 +22,11 @@ class ProcessApi:
     def GetReq(self, tag, filters):
         #TODO::: SET UP PAGES.
         try:
+            if (self.api_key):
+                url1=self.url + tag + "?/" + filters +"&" + "api_key=" +self.api_key
+            else:
+                url1=self.url + tag + "?/" + filters
 
-            url1=self.url + tag + "?/" + filters +"&" + "api_key=" +self.api_key
             response_data = requests.request("GET", url1, headers=self.headers, data=self.payload)
             response_df=pandas.DataFrame(json.loads(response_data.text))
         except:
