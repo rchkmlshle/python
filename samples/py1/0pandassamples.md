@@ -1,4 +1,4 @@
-# Expressions and Lazy Conjecture   
+# Expressions    
 
 ## Set value based on filtered match
 expressions.loc[(expressions["operator"] == ">") & (expressions['left_value'] > expressions['right_value']), 'value'] = "true"
