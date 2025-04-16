@@ -56,6 +56,8 @@ WHERE customer_id IN (SELECT customer_id
 */
 
 ---
+
+
 SELECT customer_id, customer_name
 FROM
     Customers
