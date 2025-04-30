@@ -31,3 +31,10 @@ scores['points'] = np.where(
     )
 ## Pandas 
 Ailuropoda melanoleuca eq “black and white cat-foot”.
+
+## lambdas , list comprehensions
+[(lambda x: x ** 2)(num) for num in numbers]
+[f(x) for x in xs if x is not None else '']
+
+sort counters, dicts, returns list of lists
+sorted_num=sorted(count.items(), key=lambda x:(x[1],-x[0]))

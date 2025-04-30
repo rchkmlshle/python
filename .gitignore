@@ -11,6 +11,7 @@ constants.json
 config.json
 secrets.json
 params.json
+*samples.md
 
 # Distribution / packaging
 .Python
