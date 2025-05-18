@@ -46,13 +46,58 @@ class Solution:
 
         return ans
 
+    def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
+        height_names=dict(zip(heights,names))
+        sorted_heights=sorted(height_names.items(),  key=lambda x:-x[0])
+        names_sorted=[item[1] for item in sorted_heights]
+        return names_sorted
+    
+    def sortbyIndex(nums: List[int]):
+        """
+        Input: nums = [3,4,5,1,2]
+        Output: 2
+        Explanation: 
+        After the first right shift, nums = [2,3,4,5,1].
+        After the second right shift, nums = [1,2,3,4,5].
+        Now nums is sorted; therefore the answer is 2.
+        """
+        nums_sorted=sorted(nums)
+        if nums==nums_sorted:
+            return 0
+
+        for i in range(len(nums)):
+            nums=nums[-1:]+nums[:-1]
+            if nums==nums_sorted:
+                return i+1
+        return -1
+    
+    def mergeSort(nums1: List[int], nums2: List[int]) -> None:
+        m=len(nums1)
+        n=len(nums2)
+        nums1[m:]=nums2
+        nums1.sort()
+
+    def sortSentence(s: str) -> str:
+        list1=s.split(" ")
+        s_dict={}
+        for item in list1:
+            
+            s_dict[item[-1]]=item[:-1]
+        sorted_list=sorted(s_dict.items(), key=lambda x:x[0] )
+        words=[item[1] for item in sorted_list]
+        words_=" ".join(words)
+        
+        return words_
+       
 def main():
     listA=[3,1,2,4]
     listB=[4,2,5,7]
     listC=[2,3,1,3,2]
+    list_sentence="is2 sentence4 This1 a3"
     #print(Solution.sortArrayByParity(listA))
     #print(Solution.sortArrayByParityII(listB))
     #print(Solution.frequencySort(listC))
+    print(Solution.sortSentence(list_sentence))
 
 if __name__=='__main__':
     main()
